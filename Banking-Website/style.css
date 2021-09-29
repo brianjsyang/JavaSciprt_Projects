@@ -666,8 +666,9 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 100%;
-  background-color: white;
+  width: 120%;
+  height: 60px;
+  background-color: #37383d;
   color: #bbb;
   font-size: 1.5rem;
   font-weight: 400;
