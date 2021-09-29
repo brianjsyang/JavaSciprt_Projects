@@ -16,7 +16,7 @@ const tabsContent = document.querySelectorAll('.operations__content');
 const nav = document.querySelector('.nav');
 
 const openModal = function (e) {
-  e.preventDifault();
+  e.preventDefault();
   modal.classList.remove('hidden');
   overlay.classList.remove('hidden');
 };
@@ -56,8 +56,12 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
   e.preventDefault();
 
   // Matching strategy to avoid click event on parent element
-  if (e.target.classList.contains('nav__link')) {
+  if (
+    e.target.classList.contains('nav__link') &&
+    !e.target.classList.contains('nav__link--btn')
+  ) {
     const id = e.target.getAttribute('href');
+    console.log(id);
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   }
 });
