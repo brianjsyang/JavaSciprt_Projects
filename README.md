@@ -1,5 +1,7 @@
 # JavaScript Projects
 
+Vanilla JavaScript Projects
+
 - Banking Website
 
 Login
